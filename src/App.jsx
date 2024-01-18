@@ -2,24 +2,41 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [todos, setTodo] = useState([
+    {
+      name:"aryam",
+      age:"21"
+    },
+    {
+      name:"amrit",
+      age:"21"
+    },
+    {
+      name:"gopal",
+      age:"21"
+    },
+    {
+      name:"vinesh",
+      age:"21"
+    }
+  ]);
 
   return (
     <div>
-      <CustomButton count={count} setCount={setCount}> </CustomButton>
+      {todos.map(function(todo){
+        return <Todo name={todo.name} age={todo.age}> </Todo>
+      })}
+      
     </div>
   )
 }
 
-function CustomButton(props){
-
-  function onClickHandler(){
-    props.setCount(props.count+1);
-  }
+function Todo(props){
   return(
-    <button onClick={onClickHandler}>
-    counter {props.count}
-  </button>
+    <div>
+    <h1>Name: {props.name}</h1>
+    <h1>Age: {props.age}</h1>
+  </div>
   ) 
 }
 
