@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import './App.css'
-import Todos from './components/Todos';
+import {Todos} from './components/Todos.jsx';
+import { Header } from './components/Header.jsx';
 
 function App() {
   const [todos, setTodo] = useState([
@@ -22,10 +22,11 @@ function App() {
     }
   ]);
 
+  const [header, setHeader] = useState("Vinesh");
+
   return (
-    <div>
+    <div><Header header={header}></Header>
       <Todos todos={todos}></Todos>
-      
     </div>
   )
 }
