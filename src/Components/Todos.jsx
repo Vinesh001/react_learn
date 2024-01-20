@@ -1,6 +1,6 @@
 import React from "react"
 
-export default Todos = React.memo( function Todos({todos}){
+export function Todos({todos}){
     return(<div>
         {todos.map((todo)=>{
             return( <div>
@@ -9,4 +9,4 @@ export default Todos = React.memo( function Todos({todos}){
             </div>)
         })}
     </div>)
-})
+}
