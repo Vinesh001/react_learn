@@ -1,6 +1,10 @@
+import { Button } from "./Button";
+import { useState } from "react";
 
-export function Header(props){
+export function Header(){
+    const [header, setHeader] = useState("Sachin");
     return (<div>
-        <h1>{props.header}</h1>
+        <Button setHeader={setHeader}></Button>
+        <h1>Random number: {header}</h1>
     </div>)
 }

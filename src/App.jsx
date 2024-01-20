@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import {Todos} from './components/Todos.jsx';
 import { Header } from './components/Header.jsx';
-import { Button } from './components/Button.jsx';
+// import { Button } from './components/Button.jsx';
 
 function App() {
   const [todos, setTodo] = useState([
@@ -27,12 +27,12 @@ function App() {
     }
   ]);
 
-  const [header, setHeader] = useState("Sachin");
+  // const [header, setHeader] = useState("Sachin");
 
   return (
     <>
-      <Button setHeader={setHeader}></Button>
-      <Header header={header}></Header>
+      {/* <Button setHeader={setHeader}></Button> */}
+      <Header></Header>
       <Todos todos={todos}></Todos>
     </>
   )
