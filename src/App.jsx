@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import Todos from './components/Todos';
 
 function App() {
   const [todos, setTodo] = useState([
@@ -23,21 +24,11 @@ function App() {
 
   return (
     <div>
-      {todos.map(function(todo){
-        return <Todo name={todo.name} age={todo.age}> </Todo>
-      })}
+      <Todos todos={todos}></Todos>
       
     </div>
   )
 }
 
-function Todo(props){
-  return(
-    <div>
-    <h1>Name: {props.name}</h1>
-    <h1>Age: {props.age}</h1>
-  </div>
-  ) 
-}
 
 export default App
