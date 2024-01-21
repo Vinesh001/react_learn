@@ -6,6 +6,7 @@ import { Wrapper } from './components/Wrapper.jsx';
 import { Hooks } from './components/Hooks.jsx';
 import { Button } from './components/Button.jsx';
 import {TodoBtnId} from './components/TodoBtnId.jsx'
+import { UseMemo } from './components/UseMemo.jsx';
 import axios from "axios"
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           
   return (
     <>
+      <UseMemo></UseMemo>
       {/* <Button setHeader={setHeader}></Button> */}
       <Header></Header>
       {/* <Todos todos={todos}></Todos> */}
